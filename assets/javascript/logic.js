@@ -108,5 +108,5 @@ database.ref("/trainDatabase").on("child_added", function(childSnapshot, prevChi
 
   // Add each train's data into the table
   $("#train-info> tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" +
-  frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + trainMinutesTill + "</td><td>" + "" + "</td></tr>");
+  frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + trainMinutesTill + "</td><td>" + "<button>delete</button><button>update</button>" + "</td></tr>");
 });
