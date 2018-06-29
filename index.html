@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Arrival</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+ 
+
+     <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+  <!-- Moment Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+
+    <div class="jumbotron"><h1>Train Schedule</h1><p>Choo choo train !!!</p></div>
+
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputTrainName">Train Name</label>
+            <input type="text" class="form-control" id="input-TrainName" placeholder="Amtrack #5544">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputDestination">Destination</label>
+            <input type="text" class="form-control" id="input-Destination" placeholder="Minneapolis">
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputFirstTrain">First Train (HH:MM -military time)</label>
+          <input type="text" class="form-control" id="input-FirstTrain" placeholder="0800">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputFrequency">Frequency(min)</label>
+          <input type="number" class="form-control" id="input-Frequency" placeholder="5">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="submit-Train">submit</button>
+      </form>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">Next Train</th>
+            <th scope="col">Minute left</th>
+          </tr>
+        </thead>
+        <tbody id="train-info">
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table> 
+      <div id="train-info"></div>
+      <script src="./assets/javascript/logic.js"></script>
+</body>
+</html>
+
